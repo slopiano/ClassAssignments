@@ -1,0 +1,301 @@
+FFF.FFF
+======================================================================
+FAIL: testEquilateralTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 36, in testEquilateralTriangles
+    self.assertEqual(classifyTriangle(side,side,side),'Equilateral', str(side) + ',' + str(side) + ',' + str(side) + ', should be equilateral')
+AssertionError: 'InvalidInput' != 'Equilateral'
+- InvalidInput
++ Equilateral
+ : 5,5,5, should be equilateral
+
+======================================================================
+FAIL: testIsoscelesTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 56, in testIsoscelesTriangles
+    self.assertEqual(classifyTriangle(1,1,1),'Isosceles')
+AssertionError: 'InvalidInput' != 'Isosceles'
+- InvalidInput
++ Isosceles
+
+
+======================================================================
+FAIL: testNotTriangle (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 69, in testNotTriangle
+    self.assertEqual(classifyTriangle(200,2,2),'NotATriangle')
+AssertionError: 'InvalidInput' != 'NotATriangle'
+- InvalidInput
++ NotATriangle
+
+
+======================================================================
+FAIL: testRightTriangleA (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 21, in testRightTriangleA
+    self.assertEqual(classifyTriangle(3,4,5),'Right','3,4,5 is a Right triangle')
+AssertionError: 'InvalidInput' != 'Right'
+- InvalidInput
++ Right
+ : 3,4,5 is a Right triangle
+
+======================================================================
+FAIL: testRightTriangleB (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+    self.assertEqual(classifyTriangle(5,3,4),'Right','5,3,4 is a Right triangle')
+AssertionError: 'InvalidInput' != 'Right'
+- InvalidInput
++ Right
+ : 5,3,4 is a Right triangle
+
+======================================================================
+FAIL: testScaleneTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 49, in testScaleneTriangles
+    self.assertEqual(classifyTriangle(1,5,7),'Scalene')
+AssertionError: 'InvalidInput' != 'Scalene'
+- InvalidInput
++ Scalene
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+FAILED (failures=6)
+PS D:\Assignments\HW02> python -m unittest TestTriangle
+FF.FFFF
+======================================================================
+FAIL: testEquilateralTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 36, in testEquilateralTriangles
+    self.assertEqual(classifyTriangle(side,side,side),'Equilateral', str(side) + ',' + str(side) + ',' + str(side) + ', should be equilateral')
+AssertionError: 'NotATriangle' != 'Equilateral'
+- NotATriangle
++ Equilateral
+ : 5,5,5, should be equilateral
+
+======================================================================
+FAIL: testIsoscelesTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 56, in testIsoscelesTriangles
+    self.assertEqual(classifyTriangle(1,1,1),'Isosceles')
+AssertionError: 'NotATriangle' != 'Isosceles'
+- NotATriangle
++ Isosceles
+
+
+======================================================================
+FAIL: testOutOfBounds (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 63, in testOutOfBounds
+    self.assertEqual(classifyTriangle(400,400,400),'InvalidInput')
+AssertionError: 'x' != 'InvalidInput'
+- x
++ InvalidInput
+
+
+======================================================================
+FAIL: testRightTriangleA (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 21, in testRightTriangleA
+    self.assertEqual(classifyTriangle(3,4,5),'Right','3,4,5 is a Right triangle')
+AssertionError: 'NotATriangle' != 'Right'
+- NotATriangle
++ Right
+ : 3,4,5 is a Right triangle
+
+======================================================================
+FAIL: testRightTriangleB (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+    self.assertEqual(classifyTriangle(5,3,4),'Right','5,3,4 is a Right triangle')
+AssertionError: 'NotATriangle' != 'Right'
+- NotATriangle
++ Right
+ : 5,3,4 is a Right triangle
+
+======================================================================
+FAIL: testScaleneTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 49, in testScaleneTriangles
+    self.assertEqual(classifyTriangle(1,5,7),'Scalene')
+AssertionError: 'NotATriangle' != 'Scalene'
+- NotATriangle
++ Scalene
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+FAILED (failures=6)
+PS D:\Assignments\HW02> python -m unittest TestTriangle
+.F....F
+======================================================================
+FAIL: testIsoscelesTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+    self.assertEqual(classifyTriangle(1,1,1),'Isosceles')
+AssertionError: 'Equilateral' != 'Isosceles'
+- Equilateral
++ Isosceles
+
+
+======================================================================
+FAIL: testScaleneTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 49, in testScaleneTriangles
+    self.assertEqual(classifyTriangle(1,5,7),'Scalene')
+AssertionError: 'NotATriangle' != 'Scalene'
+- NotATriangle
++ Scalene
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+FAILED (failures=2)
+PS D:\Assignments\HW02> python -m unittest TestTriangle
+.F....F
+======================================================================
+FAIL: testIsoscelesTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 56, in testIsoscelesTriangles
+AssertionError: 'Isoceles' != 'Isosceles'
+- Isoceles
++ Isosceles
+?    +
+
+
+======================================================================
+FAIL: testScaleneTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 50, in testScaleneTriangles
+    self.assertEqual(classifyTriangle(67,4,60),'Scalene')
+AssertionError: 'NotATriangle' != 'Scalene'
+- NotATriangle
++ Scalene
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+FAILED (failures=2)
+PS D:\Assignments\HW02> python -m unittest TestTriangle
+.F....F
+======================================================================
+FAIL: testIsoscelesTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+    self.assertEqual(classifyTriangle(4,4,9),'Isosceles')
+AssertionError: 'NotATriangle' != 'Isosceles'
+- NotATriangle
++ Isosceles
+
+
+======================================================================
+FAIL: testScaleneTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 50, in testScaleneTriangles
+    self.assertEqual(classifyTriangle(67,4,62),'Scalene')
+AssertionError: 'NotATriangle' != 'Scalene'
+- NotATriangle
++ Scalene
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+FAILED (failures=2)
+PS D:\Assignments\HW02> python -m unittest TestTriangle
+.F....F
+======================================================================
+FAIL: testIsoscelesTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+    self.assertEqual(classifyTriangle(4,4,9),'Isosceles')
+AssertionError: 'NotATriangle' != 'Isosceles'
+- NotATriangle
++ Isosceles
+
+
+======================================================================
+FAIL: testScaleneTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 51, in testScaleneTriangles
+    self.assertEqual(classifyTriangle(5,4,3),'Scalene')
+AssertionError: 'Right' != 'Scalene'
+- Right
++ Scalene
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+FAILED (failures=2)
+PS D:\Assignments\HW02> python -m unittest TestTriangle
+.F....F
+======================================================================
+FAIL: testIsoscelesTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+    self.assertEqual(classifyTriangle(9,4,4),'Isosceles')
+AssertionError: 'NotATriangle' != 'Isosceles'
+- NotATriangle
++ Isosceles
+
+
+======================================================================
+FAIL: testScaleneTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 52, in testScaleneTriangles
+    self.assertEqual(classifyTriangle(1,2,3),'Scalene')
+AssertionError: 'NotATriangle' != 'Scalene'
+- NotATriangle
++ Scalene
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+FAILED (failures=2)
+PS D:\Assignments\HW02> python -m unittest TestTriangle
+======================================================================
+FAIL: testScaleneTriangles (TestTriangle.TestTriangles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Assignments\HW02\TestTriangle.py", line 53, in testScaleneTriangles
+AssertionError: 'NotATriangle' != 'Scalene'
+- NotATriangle
++ Scalene
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+FAILED (failures=1)
+PS D:\Assignments\HW02> python -m unittest TestTriangle
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+OK
+PS D:\Assignments\HW02> python -m unittest TestTriangle
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
