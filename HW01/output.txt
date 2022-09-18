@@ -1,0 +1,59 @@
+=================================================================================================== short test summary info ==================================================================================================== 
+FAILED test_triangle.py::test_failures - AssertionError: assert 'isoceles right' == 'blah'
+1 failed, 5 passed in 0.18s
+PS D:\Assignments\HW01> pytest -q test_triangle.py
+.....FFFFF                                                                                                                                                                                                                [100%]
+=========================================================================================================== FAILURES =========================================================================================================== 
+________________________________________________________________________________________________________ test_failures _________________________________________________________________________________________________________ 
+
+    def test_failures():
+        sides = 5
+        hypotenuse = math.sqrt(pow(sides,2) + pow(sides,2))
+>       assert classify_triangle(sides,sides,hypotenuse) == "blah"
+E       AssertionError: assert 'isoceles right' == 'blah'
+E         - blah
+E         + isoceles right
+
+test_triangle.py:55: AssertionError
+________________________________________________________________________________________________________ test_failures1 ________________________________________________________________________________________________________ 
+
+    def test_failures1():
+>       assert classify_triangle(8,15,17) == "scalene"
+E       AssertionError: assert 'scalene right' == 'scalene'
+E         - scalene
+E         + scalene right
+
+test_triangle.py:58: AssertionError
+________________________________________________________________________________________________________ test_failures2 ________________________________________________________________________________________________________ 
+
+    def test_failures2():
+>       assert classify_triangle(sides,sides,hypotenuse) == "isoceles"
+E       NameError: name 'sides' is not defined
+
+test_triangle.py:63: NameError
+________________________________________________________________________________________________________ test_failures3 ________________________________________________________________________________________________________ 
+
+    def test_failures3():
+>       assert classify_triangle(123124,2424,344) == "equilateral"
+E       AssertionError: assert 'scalene' == 'equilateral'
+E         - equilateral
+E         + scalene
+
+test_triangle.py:66: AssertionError
+________________________________________________________________________________________________________ test_failures5 ________________________________________________________________________________________________________ 
+
+    def test_failures5():
+>       assert classify_triangle(67,67,3) == "FAILURE"
+E       AssertionError: assert 'isoceles' == 'FAILURE'
+E         - FAILURE
+E         + isoceles
+
+test_triangle.py:69: AssertionError
+=================================================================================================== short test summary info ==================================================================================================== 
+FAILED test_triangle.py::test_failures - AssertionError: assert 'isoceles right' == 'blah'
+FAILED test_triangle.py::test_failures1 - AssertionError: assert 'scalene right' == 'scalene'
+FAILED test_triangle.py::test_failures2 - NameError: name 'sides' is not defined
+FAILED test_triangle.py::test_failures3 - AssertionError: assert 'scalene' == 'equilateral'
+FAILED test_triangle.py::test_failures5 - AssertionError: assert 'isoceles' == 'FAILURE'
+5 failed, 5 passed in 0.13s
+PS D:\Assignments\HW01> 

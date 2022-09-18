@@ -27,10 +27,22 @@ def test_equilateral():
     assert classify_triangle(a,a,a) == "equilateral"
 
 def test_scalene_right():
-    assert classify_triangle(8,6,10) == "scalene right"
-    assert classify_triangle(3,4,5) == "scalene right"
-    assert classify_triangle(21,20,29) == "scalene right"
-    assert classify_triangle(8,15,17) == "scalene right"
+    a = 4
+    b = 30
+    hyp = math.sqrt(math.pow(a,2) + math.pow(b,2))
+    assert classify_triangle(a,b,hyp) == "scalene right"
+    a = 23452345
+    b = 124083498
+    hyp = math.sqrt(math.pow(a,2) + math.pow(b,2))
+    assert classify_triangle(a,b,hyp) == "scalene right"
+    a = 4.346
+    b = 30.2352
+    hyp = math.sqrt(math.pow(a,2) + math.pow(b,2))
+    assert classify_triangle(a,b,hyp) == "scalene right"
+    a = 4.984
+    b = 243646
+    hyp = math.sqrt(math.pow(a,2) + math.pow(b,2))
+    assert classify_triangle(a,b,hyp) == "scalene right"
 
 def test_isoceles_right():
     sides = 5
@@ -48,3 +60,23 @@ def test_isoceles_right():
     sides = 421098
     hypotenuse = math.sqrt(pow(sides,2) + pow(sides,2))
     assert classify_triangle(sides,sides,hypotenuse) == "isoceles right"
+
+def test_failures():
+    sides = 5
+    hypotenuse = math.sqrt(pow(sides,2) + pow(sides,2))
+    assert classify_triangle(sides,sides,hypotenuse) == "blah"
+
+def test_failures1():
+    assert classify_triangle(8,15,17) == "scalene"
+    sides = 4
+    hypotenuse = math.sqrt(pow(sides,2) + pow(sides,2))
+
+def test_failures2():
+    assert classify_triangle(sides,sides,hypotenuse) == "isoceles"
+
+def test_failures3():
+    assert classify_triangle(123124,2424,344) == "equilateral"
+
+def test_failures5():
+    assert classify_triangle(67,67,3) == "FAILURE"
+    
