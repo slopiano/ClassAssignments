@@ -7,5 +7,5 @@ script:
  - cd HW02
  - python -m unittest TestTriangle
  - cd ../
- - cd GitHubApi-HW4a
- - pytest -q test_github.py
+ - cd GitHubApi-HW4a 
+ - pytest
