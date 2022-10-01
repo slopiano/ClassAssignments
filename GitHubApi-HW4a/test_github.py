@@ -5,7 +5,7 @@ from github import get_user
 def test_richkempinski(capsys):
     get_user('richkempinski')
     captured = capsys.readouterr()
-    assert captured.out == 'Repo: csp Number of commits : 2\n\
+    assert captured.out == 'Repo: csp Number of commits: 2\n\
 Repo: hellogitworld Number of commits: 30\n\
 Repo: helloworld Number of commits: 6\n\
 Repo: Mocks Number of commits: 10\n\
