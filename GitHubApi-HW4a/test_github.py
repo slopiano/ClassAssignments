@@ -2,7 +2,7 @@ import unittest
 import pytest
 from github import get_user
 
-def test_richkempinski():
+def test_richkempinski(capsys):
     get_user('richkempinski')
     captured = capsys.readouterr()
     assert captured.out == 'Repo: csp Number of commits: 2\n\
