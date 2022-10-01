@@ -71,9 +71,6 @@ def test_failures1():
     sides = 4
     hypotenuse = math.sqrt(pow(sides,2) + pow(sides,2))
 
-def test_failures2():
-    assert classify_triangle(sides,sides,hypotenuse) == "isoceles"
-
 def test_failures3():
     assert classify_triangle(123124,2424,344) == "equilateral"
 
