@@ -1,15 +1,33 @@
 import unittest
-from unittest.mock import Mock, patch
+from unittest import mock
 import pytest
-from github import get_user
+import github
 
 class Test_git_user(unittest.TestCase):
 
-    @patch("github.get_user")
+    @mock.patch("github.get_user")
     def test_mock_testing_rich(self, mock_get):
-        mock_get.return_value = 9
-        result = get_user('richkempinski')
-        self.assertEqual(result, 9)
+        mock_get.return_value = 10
+        result = github.get_user('richkempinski')
+        self.assertEqual(result, 10)
+    
+    @mock.patch("github.get_user")
+    def test_mock_testing_sam(self, mock_get):
+        mock_get.return_value = 30
+        result = github.get_user('sam')
+        self.assertEqual(result, 30)
+    
+    @mock.patch("github.get_user")
+    def test_mock_testing_tom(self, mock_get):
+        mock_get.return_value = 1
+        result = github.get_user('slopiano')
+        self.assertEqual(result, 1)
+    
+    @mock.patch("github.get_user")
+    def test_mock_testing_jerry(self, mock_get):
+        mock_get.return_value = 4
+        result = github.get_user('jerry')
+        self.assertEqual(result, 4)
 
 # def test_richkempinski(capsys):
 #     get_user('richkempinski')
