@@ -3,6 +3,8 @@ from unittest.mock import Mock, patch
 import pytest
 from github import get_user
 
+repos = ["csp", "hellogitworld", "helloworld", "Mocks", "Project1", "richkempinski.github.io", "threads-of-life", "try_nbdev", "try_nbdev2"]
+
 def mock_testing_rich(mock_get):
     with patch('github.requests.get') as mock_get:
 
