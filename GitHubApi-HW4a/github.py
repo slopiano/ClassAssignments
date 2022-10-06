@@ -9,3 +9,5 @@ def get_user(user):
         repos = requests.get(f'https://api.github.com/repos/{user}/{name}/commits')
         count = len(repos.json())
         print(f'Repo: {name} Number of commits: {count}')
+    return len(data)
+

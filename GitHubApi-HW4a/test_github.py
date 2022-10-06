@@ -3,10 +3,13 @@ from unittest.mock import Mock, patch
 import pytest
 from github import get_user
 
-repos = ["csp", "hellogitworld", "helloworld", "Mocks", "Project1", "richkempinski.github.io", "threads-of-life", "try_nbdev", "try_nbdev2"]
+class Test_git_user(unittest.TestCase):
 
-def mock_testing_rich(mock_get):
-    with patch('github.requests.get') as mock_get:
+    @patch("github.get_user")
+    def test_mock_testing_rich(self, mock_get):
+        mock_get.return_value = 9
+        result = get_user('richkempinski')
+        self.assertEqual(result, 9)
 
 # def test_richkempinski(capsys):
 #     get_user('richkempinski')
